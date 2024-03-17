@@ -1,0 +1,195 @@
+/* Global CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container .logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #425c77;
+}
+
+/* Dropdown CSS */
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #2d3e50;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #f1f1f1;
+  color: #2d3e50;
+}
+/* Main Content */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.content-description {
+  flex: 1;
+}
+
+.content-description .title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.content-description p {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+.content-description button {
+  padding: 0.8rem 2.5rem;
+  border-radius: 999px;
+  margin-top: 1rem;
+  background-color: #2d3e50;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.content-description button:hover {
+  background-color: #425c77;
+}
+
+.content-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+aside {
+  display: flex;
+  align-items: center;
+}
+
+.social-media ul {
+  padding: 1.5rem;
+  background-color: #2d3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media li {
+  list-style-type: none;
+}
+
+.social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-media li a:hover {
+  color: #89b0d9;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-description .title {
+    font-size: 1.5rem;
+  }
+
+  .content-description p {
+    font-size: 1rem;
+  }
+
+  .content-description button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
